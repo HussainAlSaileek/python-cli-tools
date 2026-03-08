@@ -19,7 +19,13 @@ def modulo(x, y):
     if y == 0:
         raise ValueError("Cannot perform modulo by zero")
     return x % y
-
+def get_number(prompt):
+    while True:
+        try:
+            return float(input(prompt))
+        except ValueError:
+            print("Invalid input. Please enter a number.")
+            
 def main():
     print('This is the first CLI tool in my Python CLI tools repository!')
     print('Welcome to the calculator!')
@@ -31,14 +37,20 @@ def main():
     print('5. Power')
     print('6. Modulo')
     
-    operation_choice = int(input('Enter the number corresponding to the desired operation (1/2/3/4/5/6), enter 0 to exit: '))
-    while operation_choice != 0:
+
+    while True:
+        try:
+            operation_choice = int(input('Enter the number corresponding to the desired operation (1/2/3/4/5/6), enter 0 to exit: '))
+        except ValueError:
+            print('Invalid input. Please enter a number.')
+            continue
         if operation_choice not in [0, 1, 2, 3, 4, 5, 6]:
             print('Invalid choice. Please select a valid operation.')
-        if operation_choice in [0, 1, 2, 3, 4, 5, 6]:
+            continue
+        if operation_choice in [1, 2, 3, 4, 5, 6]:
             print('Please enter two numbers:')
-            x = float(input('Enter the first number: '))
-            y = float(input('Enter the second number: '))
+            x = get_number('Enter the first number: ')
+            y = get_number('Enter the second number: ')
         if operation_choice == 1:
             print(add(x, y))
         elif operation_choice == 2:
@@ -51,8 +63,12 @@ def main():
             print(power(x, y))
         elif operation_choice == 6:
             print(modulo(x, y))
-        operation_choice = int(input('Enter the number corresponding to the desired operation (1/2/3/4/5/6), enter 0 to exit: '))
-    print('Thank you for using the calculator!')
+        elif operation_choice == 0:
+            print('Thank you for using the calculator!')
+            break
+    
+        
+    
 
 if __name__ == "__main__":
     main()
