@@ -23,11 +23,11 @@ Make sure you have Python installed.
 Run the calculator with:
 
 ```bash
-python calculator.py
+python tools/calculator.py
 ```
 
 ## Author
 
 Hussain AlSaileek  
 Computer Engineering Student @ KFUPM
-Interested in ICRF and embedded engineering.
+Interested in RFIC and embedded engineering.
