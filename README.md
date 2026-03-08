@@ -16,6 +16,16 @@ This repository contains small command-line tools built in Python to improve my 
 - File word counter
 - Password generator
 
+## How to Run Calculator
+
+Make sure you have Python installed.
+
+Run the calculator with:
+
+```bash
+python calculator.py
+```
+
 ## Author
 
 Hussain AlSaileek  
