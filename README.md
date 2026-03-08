@@ -11,7 +11,7 @@ This repository contains small command-line tools built in Python to improve my 
 
 ## Projects (Planned)
 
-- Calculator #### Implemented
+- Calculator (Implemented)
 - Unit converter
 - File word counter
 - Password generator
